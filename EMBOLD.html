@@ -1,0 +1,568 @@
+<!DOCTYPE html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <style>
+
+        body {
+    
+    background-image: url("3.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             min-height:100vh;
+            width: 100vw; 
+             
+}
+
+
+#form {
+    width: 650px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    margin:20px ;
+    
+    
+
+
+    
+}
+
+
+#form h1 {
+    color: #0f2027;
+    text-align: left;
+    padding: 10px;
+    
+    
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: black;
+    background: linear-gradient(to LightGray);
+    border: none;
+    border-radius: 4px;
+}
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+    border-color: #2c5364;
+}
+.input-control i{
+            position:absolute ;
+            right: 12px;
+            top: 33px;
+            visibility: hidden;
+        }
+
+
+ 
+        
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 13px;
+} 
+
+
+    </style>
+    <style>
+      .image-preview{
+        width: 180;
+        min-height: 150px;
+        border: 2px solid lightgray;
+        margin-top: 10px;
+
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        font-weight: bold;
+        
+      }
+      .image-preview_image{
+        display: none;
+        width: 100%;
+      }
+
+    </style>
+</head>
+<body>
+    <style>
+      
+        * {
+          box-sizing: border-box;
+        }
+        
+        
+        .column1 {
+          float: left;
+          width: 33.33%;
+          padding: 10px;
+          height: 40px; 
+        }
+        
+        
+        .row1:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        label {
+        font-size: 20px;
+        font-weight: 700;
+        color: darkgray;
+      }
+     
+     
+
+      .text_input input[type="text"] {
+    position: absolute;
+    left: 34%;
+    transform: translateX(-50%);
+   
+    width: 160px;
+    height: 20px;
+    border-radius: 25px;
+    border: 2px lightgray solid;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+.text_input input:focus {
+    background-color:white;
+  }
+
+
+
+
+
+        </style>
+        </head>
+        <body>
+        
+           
+        
+          
+      
+    <div class="container">
+        <form id="form" action="/">
+            <div>
+            
+                <div class ="logo"><a href ="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src ="G:\embold assignment\logo\embold-logo.jpg" alt="embold logo width"="20" height="20"></a></span>
+                  <p style="text-align:right">RENEE MCKFLVFY </p>
+                  
+                  <p style="text-align:right">Account Setting</p>
+
+                </div>
+              
+
+           
+                  
+            </div>
+
+             
+                  <hr>
+                  <div class="container">
+                    <div class="col-row-4">
+                      <label>User list</label>
+                      
+                        <div class="text_input" >
+                            <input type="text" name="q" placeholder="search..">
+                            
+                        </div>
+                        <br>
+                        
+                    
+                   
+               
+                      
+                   
+                      
+                  </div>
+
+            <div class="input-control">
+                <style>
+                    table {
+                      font-family: arial, sans-serif;
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+                    
+                     table,th,td {
+                      border: 1px solid black;
+                      text-align: left;
+                      padding: 8px;
+                     
+                    }
+                    th{
+                    background-color: #dddddd;
+                    }
+                    
+  
+
+#role{
+  border-color: lightgray;
+  width: 180px;
+  height: 35px;
+}
+
+                    
+                    </style>
+                   
+                    </head>
+                    <body>
+                    
+                    <br>
+                    
+                    <style>
+                      .fixTableHead {
+                        overflow-y: auto;
+                        height: 110px;
+                      }
+                      .fixTableHead thead th {
+                        position: sticky;
+                        top: 0;
+                      }
+                      table {
+                        border-collapse: collapse;        
+                        width: 100%;
+                      }
+                      th,
+                      td {
+                        padding: 8px 15px;
+                        border: 1px solid gray;
+                      }
+                      th {
+                        background:lightgray;
+                      }
+                    </style>
+                  </head>
+                    
+                  <body>
+                    <div class="fixTableHead">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                            
+                    
+                          </tr>
+                        </thead>
+                    
+                        <tbody>
+                          <tr>
+                            <td>Ada Lovelace</td>
+                        <td>Admin</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                          </svg></td>
+                          </tr>
+                          <tr>
+                            <td>Grade Hopper</td>
+                        <td>Developer</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                          </svg></td>
+                          </tr>
+                          <tr>
+                            <td>Margaret Hamilton</td>
+                        <td>QA</td>
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                          </svg></td>
+                          </tr>
+                          <tr>
+                            <td>Joan Clarke</td>
+                            <td>Manager</td>
+                            <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                              </svg></td>
+                          </tr>
+                          <tr>
+                           
+                          </tr>
+                        </tbody>
+                          
+                      </table>
+                    </div>
+                    <br>
+                   
+                   
+                     
+                    
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 250px; 
+    }
+    
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    #lr{
+      color: lightgray;
+    }
+    .alignleft {
+	float: left;
+  color: darkgray;
+}
+.alignright {
+	float: right;
+  color: darkgray;
+}
+.alignleft1{
+   float: left; 
+  color: darkgray;
+ 
+}
+
+    
+    </style>
+    </head>
+    <body>
+    
+        
+             <div id="lr">
+              <h3 class="alignleft">New User Details</h3>
+              <h3 class="alignright" >Profile picture</h3>
+              
+
+            </div>
+            
+           
+        
+        
+        
+    
+    <div class="row">
+      <div class="column" >
+        
+        <hr>
+        <input id="username" name="username" type="text" placeholder="Username" autocomplete="off">
+        <div class="error"></div>
+       
+        
+        
+        
+        <input id="firstname" name="firstname" type="text" placeholder=" Firstname" autocomplete="off">
+        <div class="error"></div>
+      
+        
+       
+        <select name="Role" id="role">
+          <option value="role">Role</option>
+            <option value="admin">Admin</option>
+            <option value="developer">Developer</option>
+            <option value="QA">QA</option>
+            <option value="manager">Manager</option>
+          </select> 
+       
+       
+         
+          <br>
+          <div id="lr">
+            <span><input id="chekid" type="checkbox" >
+              <lable class="alignleft">Send email confirmation</lable></span>
+            
+            </div>
+          
+            
+            
+         
+          <br>
+          
+          
+         
+      </div>
+      
+      
+      
+      <div class="column" >
+        <hr>
+          
+        <input id="email" name="email" type="text" placeholder="email" autocomplete="off">
+        <div class="error"></div>
+       
+        
+        
+        
+        <input id="lastname" name="Lastname" type="text" placeholder=" Lastname" autocomplete="off">
+        <div class="error"></div>
+        
+        
+      </div>
+      
+      <div class="column" >
+        
+        
+        <div>
+          <hr>
+   
+        
+        <div class="image-preview " id="imagePreview">
+          <img src="" alt="image-preview" class="image-preview_image">
+          <span class="image-preview_degault-text"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="darkgray" class="bi bi-clouds-fill" viewBox="0 0 16 16">
+            <path d="M11.473 9a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 14h8.5a2.5 2.5 0 1 0-.027-5z"/>
+            <path d="M14.544 9.772a3.506 3.506 0 0 0-2.225-1.676 5.502 5.502 0 0 0-6.337-4.002 4.002 4.002 0 0 1 7.392.91 2.5 2.5 0 0 1 1.17 4.769z"/>
+          </svg></span>
+         
+          </div>
+          
+          <button>Select image </button> 
+         
+          <!-- <input type="file"  id="myFile" name="filename" accept="image/png, image/jpeg" 
+          aria-setsize="1kb" hidden>  -->
+
+
+          <!-- <script>
+            const inpFile=document.getElementById("inpFile");
+            const previewContainer=document.getElementById("imagePreview");
+            const previewImage=previewContainer.getElementById(".image-preview_image");
+            const previewDefaultText=previewContainer.getElementById(".image-preview_default-text");
+
+            inpFile.addEventListener("change" ,function(){
+               const file=this.file(0);
+
+               if(file)
+               {
+                    const reader= new FileReader();
+
+                    previewDefaultText.style.display="none";
+                    previewImage.style.display="block";
+
+                    reader.addEventListener("load", function(){
+                      
+                      previewImage.setAttribute("src",this.result);
+
+                    });
+                    reader.readAsDataURL(file);
+
+               }else{
+                 previewDefaultText.style.display=null;
+                 previewImage.style.display=null;
+                 previewImage.setAttribute("src", "");
+               }
+
+             } );
+
+
+          </script>
+         -->
+          
+          
+                    
+         
+        </div>
+        
+        
+          
+         
+      </div> 
+      <hr>
+
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        
+        .column1 {
+          float: left;
+          width: 33.33%;
+          padding: 10px;
+          height: 40px; 
+        }
+        
+        
+        .row1:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        </style>
+        </head>
+        <body>
+        
+           
+        <div class="row1">
+          <div class="column1" >
+            
+            
+            <input type="submit" value="Add Users" style=background-color:LightSeaGreen; >
+            
+              
+              
+             
+          </div>
+          
+          <div class="column1" >
+              
+            
+            <input type="submit" value="cancel" style=background-color:LightGray;>
+            
+           
+          </div>
+          
+      
+    </div>
+    
+
+
+    
+        
+
+
+
+                    </body>
+                    </html>
+                
